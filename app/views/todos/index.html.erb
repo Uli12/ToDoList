@@ -1,0 +1,8 @@
+<h1> Welcome to your To Do List! </h1>
+<p><%= link_to 'New Todo List', new_todo_path %></p>
+<% @todos.each do |todo| %>
+  <h2><%= todo.title %></h2>
+  <%= link_to 'Show Page', todo_path(todo) %>
+  <%= link_to 'Edit Page', edit_todo_path(todo) %>
+  <%= link_to 'Destroy Page', todo, method: :delete %>
+<% end %>
